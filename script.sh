@@ -1,11 +1,10 @@
-bq query --use_legacy_sql=false \
-'
-CREATE OR REPLACE EXTERNAL TABLE `thelook_gcda.product_returns`
+bq query --use_legacy_sql=false "
+CREATE OR REPLACE EXTERNAL TABLE \`thelook_gcda.product_returns\`
 OPTIONS (
-format ="PARQUET",
-uris = ['gs://sureskills-lab-dev/DAC2M2L4/returns/returns_*.parquet']
+  format = 'PARQUET',
+  uris = ['gs://sureskills-lab-dev/DAC2M2L4/returns/returns_*.parquet']
 );
-'
+"
 
 bq query --use_legacy_sql=false \
 '
